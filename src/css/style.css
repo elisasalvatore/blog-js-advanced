@@ -73,29 +73,29 @@ body {
 }
 
 #ctn-main-title h1 {
-	font-size: 5em;
+	font-size: 12em;
 }
 
+/* --- Create scroll animation */
 #ctn-main-title h1::after {
 	content: attr(data-text);
 	position: absolute;
-	left: 110%;
+	left: 120%;
 	width: 100%;
 	text-align: center;
 }
 
 #ctn-main-title .scroll {
-	animation: scrollAnimation 6s linear infinite;
+	animation: scrollAnimation 10s linear infinite;
 	animation-play-state: running;
 }
 
-/* --- Create scroll animation */
 @keyframes scrollAnimation {
 	0% {
 		transform: translateX(0);
 	}
 	100% {
-		transform: translateX(-110%);
+		transform: translateX(-120%);
 	}
 }
 /* ------ END-  Container Main Title */
@@ -158,7 +158,6 @@ body {
 }
 /* ------ END-  Container Articles */
 /* ------ START - Container Button "Load More" */
-/* TODO */
 #ctn-btn {
 	width: 100%;
 	height: 100px;
@@ -190,7 +189,7 @@ body {
 	}
 
 	#ctn-main-title h1 {
-		font-size: 7em;
+		font-size: 12em;
 	}
 
 	.title h2 {
@@ -218,7 +217,7 @@ body {
 	}
 
 	#ctn-main-title h1 {
-		font-size: 10em;
+		font-size: 15em;
 	}
 
 	.title h2 {

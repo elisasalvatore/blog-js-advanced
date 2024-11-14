@@ -1,8 +1,11 @@
+/* MOBILE-FIRST LAYOUT */
+
 * {
 	margin: 0px;
 	padding: 0px;
 	box-sizing: border-box;
 	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
 }
 
 body {
@@ -13,7 +16,6 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	font-size: 15px;
 }
 
 /* ------ START - Upper section */
@@ -34,7 +36,10 @@ body {
 	height: 100%;
 	display: flex;
 	align-items: center;
-	font-size: 1.5em;
+}
+
+#upper-section .ws-name p {
+	font-size: 1em;
 }
 
 #upper-section .icon {
@@ -45,37 +50,158 @@ body {
 	justify-content: end;
 }
 
-#upper-section .icon i {
-	font-size: 3em;
+#upper-section .icon a i {
 	color: black;
 	text-decoration: none;
+	font-size: 2.5em;
 }
 
-#upper-section .icon i:hover {
+#upper-section .icon a:hover {
 	color: #ccc;
+	cursor: pointer;
 }
 /* ------ END - Upper section */
 /* ------ START - Container Main Title */
 #ctn-main-title {
-	margin-top: 100px;
-	padding: 20px;
+	width: 100%;
 	height: 200px;
+	margin-top: 180px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 #ctn-main-title h1 {
-	text-align: center;
-	font-size: 9em;
+	font-size: 5em;
 }
 /* ------ END-  Container Main Title */
 /* ------ START - Container Articles */
-/* TODO */
 #ctn-articles {
 	width: 100vw;
-	height: 100vh;
-	background-color: red;
+	height: 100%;
+}
+
+.article {
+	margin: 0 auto;
+	width: 90%;
+	height: 250px;
+	padding: 0 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-bottom: 3px solid #ccc;
+}
+
+.title {
+	width: 100%;
+}
+
+.title h2 {
+	font-size: 1.2em;
+}
+
+.article-details {
+	width: 40%;
+	display: flex;
+	justify-content: end;
+	align-items: center;
+}
+
+.date {
+	padding-right: 10px;
+}
+
+.date p,
+.url p {
+	text-align: center;
+}
+
+.date p,
+.url p a {
+	font-size: 0.8em;
+}
+
+.url a {
+	text-decoration: none;
+	color: black;
+}
+.url a:hover {
+	text-decoration: underline;
+}
+
+.url a:after {
+	content: " \2192";
 }
 /* ------ END-  Container Articles */
-
 /* ------ START - Container Button "Load More" */
 /* TODO */
 /* ------ END-  Container Button "Load More" */
+/* ------ START - Media Queries CSS */
+/* Tablet in landscape mode (horizontal) */
+@media screen and (min-width: 737px) and (max-width: 1279px) {
+	#upper-section .icon a i {
+		font-size: 3em;
+	}
+
+	#ctn-main-title h1 {
+		font-size: 7em;
+	}
+
+	.title h2 {
+		font-size: 1.5em;
+	}
+
+	.date p,
+	.url p a {
+		font-size: 1em;
+	}
+}
+
+/* Desktop or laptop screens */
+@media screen and (min-width: 1280px) and (max-width: 1689px) {
+	#upper-section .ws-name p {
+		font-size: 1.2em;
+	}
+
+	#upper-section .icon a i {
+		font-size: 3em;
+	}
+
+	#ctn-main-title h1 {
+		font-size: 10em;
+	}
+
+	.title h2 {
+		font-size: 1.8em;
+	}
+
+	.date p,
+	.url p a {
+		font-size: 1em;
+	}
+}
+
+/* Large or high-resolution screens */
+@media screen and (min-width: 1690px) {
+	#upper-section .ws-name p {
+		font-size: 1.2em;
+	}
+
+	#upper-section .icon a i {
+		font-size: 3em;
+	}
+
+	#ctn-main-title h1 {
+		font-size: 15em;
+	}
+
+	.title h2 {
+		font-size: 2em;
+	}
+
+	.date p,
+	.url p a {
+		font-size: 1.2em;
+	}
+}
+/* ------ END - Media Queries CSS */

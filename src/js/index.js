@@ -1,4 +1,8 @@
-// importare lo stile CSS
+// import CSS style
 import "../css/style.css";
+// import getData function
+import getData from "./api/getData";
 
-console.log("Hello World!");
+document.addEventListener("DOMContentLoaded", () => {
+	getData();
+});

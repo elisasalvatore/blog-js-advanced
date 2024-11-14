@@ -135,6 +135,28 @@ body {
 /* ------ END-  Container Articles */
 /* ------ START - Container Button "Load More" */
 /* TODO */
+#ctn-btn {
+	width: 100%;
+	height: 100px;
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.loadMoreBtn {
+	border: none;
+	padding: 10px 20px;
+	font-size: 1em;
+	color: white;
+	background-color: black;
+}
+
+.loadMoreBtn:hover {
+	cursor: pointer;
+	color: black;
+	background-color: #ccc;
+}
 /* ------ END-  Container Button "Load More" */
 /* ------ START - Media Queries CSS */
 /* Tablet in landscape mode (horizontal) */
@@ -153,6 +175,10 @@ body {
 
 	.date p,
 	.url p a {
+		font-size: 1em;
+	}
+
+	.loadMoreBtn {
 		font-size: 1em;
 	}
 }
@@ -179,6 +205,10 @@ body {
 	.url p a {
 		font-size: 1em;
 	}
+
+	.loadMoreBtn {
+		font-size: 1.2em;
+	}
 }
 
 /* Large or high-resolution screens */
@@ -201,6 +231,10 @@ body {
 
 	.date p,
 	.url p a {
+		font-size: 1.2em;
+	}
+
+	.loadMoreBtn {
 		font-size: 1.2em;
 	}
 }

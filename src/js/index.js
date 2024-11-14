@@ -1,8 +1,10 @@
 // import CSS style
 import "../css/style.css";
-// import getData function
+// import functions
 import getData from "./api/getData";
+import createLoadMoreBtn from "./components/loadMoreBtn";
 
 document.addEventListener("DOMContentLoaded", () => {
 	getData();
+	createLoadMoreBtn();
 });

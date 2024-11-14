@@ -69,10 +69,34 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	overflow: hidden;
 }
 
 #ctn-main-title h1 {
 	font-size: 5em;
+}
+
+#ctn-main-title h1::after {
+	content: attr(data-text);
+	position: absolute;
+	left: 110%;
+	width: 100%;
+	text-align: center;
+}
+
+#ctn-main-title .scroll {
+	animation: scrollAnimation 6s linear infinite;
+	animation-play-state: running;
+}
+
+/* --- Create scroll animation */
+@keyframes scrollAnimation {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-110%);
+	}
 }
 /* ------ END-  Container Main Title */
 /* ------ START - Container Articles */

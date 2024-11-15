@@ -11,7 +11,6 @@
 body {
 	width: 100vw;
 	height: 100%;
-	padding: 20px;
 	padding-top: 0px;
 	display: flex;
 	flex-direction: column;
@@ -26,9 +25,10 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: 0 50px;
+	padding: 0 20px;
 	background-color: #fff;
 	border-bottom: 1px solid #ccc;
+	z-index: 1;
 }
 
 #upper-section .ws-name {
@@ -109,7 +109,6 @@ body {
 	margin: 0 auto;
 	width: 90%;
 	height: 250px;
-	padding: 0 20px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -184,6 +183,10 @@ body {
 /* ------ START - Media Queries CSS */
 /* Tablet in landscape mode (horizontal) */
 @media screen and (min-width: 737px) and (max-width: 1279px) {
+	#upper-section {
+		padding: 0 60px;
+	}
+
 	#upper-section .icon a i {
 		font-size: 3em;
 	}
@@ -208,6 +211,10 @@ body {
 
 /* Desktop or laptop screens */
 @media screen and (min-width: 1280px) and (max-width: 1689px) {
+	#upper-section {
+		padding: 0 60px;
+	}
+
 	#upper-section .ws-name p {
 		font-size: 1.2em;
 	}
@@ -236,6 +243,10 @@ body {
 
 /* Large or high-resolution screens */
 @media screen and (min-width: 1690px) {
+	#upper-section {
+		padding: 0 60px;
+	}
+
 	#upper-section .ws-name p {
 		font-size: 1.2em;
 	}

@@ -56,8 +56,8 @@ body {
 	font-size: 2.5em;
 }
 
-#upper-section .icon a:hover {
-	color: #ccc;
+#upper-section .icon a i:hover {
+	color: goldenrod;
 	cursor: pointer;
 }
 /* ------ END - Upper section */
@@ -175,10 +175,10 @@ body {
 	background-color: black;
 }
 
-.loadMoreBtn:hover {
+.loadMoreBtn:hover,
+.btn-back-top:hover {
 	cursor: pointer;
-	color: black;
-	background-color: #ccc;
+	background-color: goldenrod;
 }
 /* ------ END-  Container Button "Load More" */
 /* ------ START - Button "Back to top" */
@@ -202,6 +202,46 @@ body {
 	text-decoration: none;
 }
 /* ------ END - Button "Back to top" */
+/* ------ START - Spinner Loader */
+.loader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #f7f9fb;
+	transition:
+		opacity 1s,
+		visibility 1s;
+}
+
+.loader-hidden {
+	opacity: 0;
+	visibility: hidden;
+}
+
+.loader::after {
+	content: "";
+	width: 75px;
+	height: 75px;
+	border: 15px solid #dddddd;
+	border-top-color: goldenrod;
+	border-radius: 50%;
+	animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading {
+	from {
+		transform: rotate(0turn);
+	}
+	to {
+		transform: rotate(1turn);
+	}
+}
+/* ------ END - Spinner Loader */
 /* ------ START - Media Queries CSS */
 /* Tablet in landscape mode (horizontal) */
 @media screen and (min-width: 737px) and (max-width: 1279px) {

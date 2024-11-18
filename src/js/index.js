@@ -1,12 +1,12 @@
 // import CSS style
 import "../css/style.css";
-
+//import components
+import "./components/backToTopBtn";
 // import functions
 import getData from "./api/getData";
-import "./components/backToTopBtn";
 import createLoadMoreBtn from "./components/loadMoreBtn";
 
-document.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("load", () => {
 	getData();
 	createLoadMoreBtn();
 });

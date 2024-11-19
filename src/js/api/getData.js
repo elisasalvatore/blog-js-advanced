@@ -1,5 +1,4 @@
 // import functions
-import createLoadMoreBtn from "../components/loadMoreBtn";
 import hideLoader from "../components/spinningLoader";
 import showNArticles from "../showNArticles";
 import getArticle from "./getArticle";
@@ -25,7 +24,5 @@ export default async function getData() {
 		.finally(() => {
 			//hide spinning loader when data are completely loaded
 			hideLoader();
-			// create and show "Load more" button after data loaded
-			createLoadMoreBtn();
 		});
 }

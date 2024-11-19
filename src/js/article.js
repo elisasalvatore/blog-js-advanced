@@ -24,9 +24,9 @@ export default class Article {
 		// set class to each tag
 		articleDiv.className = "article";
 		articleDetailsDiv.className = "article-details";
-		articleTitleDiv.className = "title";
-		articleDateDiv.className = "date";
-		articleURLDiv.className = "url";
+		articleTitleDiv.className = "article-title";
+		articleDateDiv.className = "article-date";
+		articleURLDiv.className = "article-url";
 
 		// handling HTML element according to its class
 		switch (
@@ -34,13 +34,13 @@ export default class Article {
 			articleDateDiv.className ||
 			articleURLDiv.className
 		) {
-			case "title":
+			case "article-title":
 				h2Title.textContent = `${this.title}`;
 			// break;
-			case "date":
+			case "article-date":
 				pDate.textContent = `${this.time}`;
 			// break;
-			case "url":
+			case "article-url":
 				aUrl.textContent = "Read more";
 				aUrl.setAttribute("href", `${this.url}`);
 				aUrl.setAttribute("target", "_blank");

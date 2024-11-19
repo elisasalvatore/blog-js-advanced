@@ -1,4 +1,4 @@
-const backTopBtn = document.querySelector(".btn-back-top");
+const backTopBtn = document.querySelector("#btn-back-top");
 window.addEventListener("scroll", checkHeight);
 
 function checkHeight() {

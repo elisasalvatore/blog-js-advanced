@@ -1,7 +1,9 @@
 <!doctype html>
-<html>
+<html lang="en">
 	<head>
-		<meta charset="utf-8" />
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<title>Newstories | Hacker News</title>
 
 		<!-- CDN FontAwesome -->
@@ -15,8 +17,10 @@
 	<body>
 		<div class="loader"></div>
 
-		<div id="upper-section">
-			<div class="ws-name"><p>Hacker News</p></div>
+		<div id="header">
+			<div class="name">
+				<p>Hacker News</p>
+			</div>
 			<div class="icon">
 				<a
 					href="https://github.com/HackerNews/API?tab=readme-ov-file"
@@ -41,10 +45,10 @@
 			<!-- add content from js -->
 		</div>
 
-		<a class="btn-back-top">
+		<div id="btn-back-top">
 			<i class="fa fa-arrow-up"></i>
-		</a>
+		</div>
 
-		<script src="./src/js/index.js"></script>
+		<script src="./src/js/index.js" defer></script>
 	</body>
 </html>

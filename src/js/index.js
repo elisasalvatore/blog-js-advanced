@@ -4,9 +4,14 @@ import "../css/style.css";
 import "./components/backToTopBtn";
 // import functions
 import getData from "./api/getData";
-import createLoadMoreBtn from "./components/loadMoreBtn";
 
-window.addEventListener("load", () => {
-	getData();
-	createLoadMoreBtn();
+document.addEventListener("DOMContentLoaded", () => {
+	try {
+		getData();
+	} catch (error) {
+		console.log(
+			"🚀 ~ file: index.js:13 ~ document.addEventListener ~ error:",
+			error
+		);
+	}
 });

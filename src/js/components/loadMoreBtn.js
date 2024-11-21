@@ -8,9 +8,6 @@ export default function createLoadMoreBtn() {
 	loadMoreBtn.classList = "loadMoreBtn";
 	loadMoreBtn.textContent = "Load more";
 
-	setTimeout(() => {
-		btnContainer.appendChild(loadMoreBtn);
-	}, 2000);
-
+	btnContainer.appendChild(loadMoreBtn);
 	loadMoreBtn.addEventListener("click", getData);
 }

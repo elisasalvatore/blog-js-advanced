@@ -1,5 +1,4 @@
 // import functions
-import hideLoader from "../components/spinningLoader";
 import showNArticles from "../showNArticles";
 import getArticle from "./getArticle";
 
@@ -9,7 +8,6 @@ export default async function getData() {
 		.then((response) => response.json())
 		.then((data) => {
 			// console.log("🚀 ~ file: getData.js:9 ~ .then ~ data:", data);
-
 			// shows 10 elements from data
 			const articles = showNArticles(data);
 
@@ -20,9 +18,5 @@ export default async function getData() {
 		})
 		.catch((error) => {
 			console.log("🚀 ~ file: getData.js:27 ~ getData ~ error:", error);
-		})
-		.finally(() => {
-			//hide spinning loader when data are completely loaded
-			hideLoader();
 		});
 }

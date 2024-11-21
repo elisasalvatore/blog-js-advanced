@@ -9,8 +9,9 @@ import createLoadMoreBtn from "./components/loadMoreBtn";
 document.addEventListener("DOMContentLoaded", () => {
 	try {
 		getData();
-		// create and show "Load more" button after data loaded
-		createLoadMoreBtn();
+		setTimeout(() => {
+			createLoadMoreBtn();
+		}, 2000);
 	} catch (error) {
 		console.log(
 			"🚀 ~ file: index.js:13 ~ document.addEventListener ~ error:",

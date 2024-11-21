@@ -1,4 +1,5 @@
 // import timeConverter function
+import hideLoader from "../components/spinningLoader";
 import { timeConverter } from "../timeConverter";
 // import class Article
 import Article from "../article";
@@ -18,8 +19,11 @@ export default async function getArticle(id) {
 			// execute the method of class Article
 			article.printArticle();
 		})
-
 		.catch((error) => {
 			console.log("🚀 ~ file: getArticle.js:23 ~ getArticle ~ error:", error);
+		})
+		.finally(() => {
+			//hide spinning loader when data are completely loaded
+			hideLoader();
 		});
 }

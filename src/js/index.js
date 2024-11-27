@@ -2,6 +2,7 @@
 import "../css/style.css";
 //import components
 import "./components/backToTopBtn";
+import "./components/scrollDownArrow";
 // import functions
 import getData from "./api/getData";
 import createLoadMoreBtn from "./components/loadMoreBtn";

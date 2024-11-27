@@ -129,6 +129,37 @@ body {
 	}
 }
 /* ------ END -  Container Main Title */
+/* ------ START - Container Arrow-down */
+.ctn-scroll-down-arrow {
+	width: 100%;
+	height: 60px;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	bottom: 0;
+	z-index: 99;
+}
+
+.fa-arrow-down {
+	font-size: 2em;
+	color: #ffffff;
+	opacity: 0.3;
+	animation: moveUpDownAnimation 1.5s linear infinite;
+}
+
+@keyframes moveUpDownAnimation {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(4px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+/* ------ END - Container Arrow-down */
 /* ------ START - Container Articles */
 #ctn-articles {
 	width: 100vw;
@@ -285,10 +316,15 @@ body {
 
 	#ctn-main-title {
 		height: 100vh;
+		margin-top: 50px;
 	}
 
 	#ctn-main-title h1 {
 		font-size: 30em;
+	}
+
+	.ctn-scroll-down-arrow {
+		display: flex;
 	}
 
 	/* Main title animation */

@@ -78,7 +78,7 @@ http://localhost:5050
 
 ## Screenshot
 
-<img class="w-100" src="./src/assets/images/screenshot-blogjs.png" alt="Blog Advanced JS"/>
+<img class="w-100" src="./src/assets/img/screenshot-blogjs.png" alt="Blog Advanced JS"/>
 
 ## Contatti
 

@@ -9,8 +9,8 @@ const metaTags = {
 		"Blog JS Advanced is a modern blog site designed to showcase dynamic animations, advanced features, and interactivity via JavaScript.",
 	image: {
 		path: "https://blog-js-advanced.netlify.app/a53fda78764b7eadf3b3930d69206f3b.png",
-		width: "536",
-		height: "270",
+		width: "600",
+		height: "300",
 	},
 };
 

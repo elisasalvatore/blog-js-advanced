@@ -8,7 +8,7 @@ const metaTags = {
 	description:
 		"Blog JS Advanced is a modern blog site designed to showcase dynamic animations, advanced features, and interactivity via JavaScript.",
 	image: {
-		path: "https://blog-js-advanced.netlify.app/images/a53fda78764b7eadf3b3930d69206f3b.png",
+		path: "https://blog-js-advanced.netlify.app/a53fda78764b7eadf3b3930d69206f3b.png",
 		width: "536",
 		height: "270",
 	},
@@ -33,7 +33,6 @@ const config = {
 		new HtmlWebpackPlugin({
 			template: "index.html",
 			favicon: "./src/assets/img/favicon.png",
-			title: "Newstories | Hacker News",
 			meta: {
 				//OpenGraph Protocol
 				"og:title": {
@@ -87,9 +86,9 @@ const config = {
 				use: [
 					{
 						loader: "file-loader",
-						options: {
-							outputPath: "images",
-						},
+						// options: {
+						// 	outputPath: "images",
+						// },
 					},
 				],
 			},

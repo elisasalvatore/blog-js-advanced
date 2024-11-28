@@ -1,5 +1,7 @@
 // import CSS style
 import "../css/style.css";
+// import images
+import "../assets/img/screenshot-blogjs.png";
 //import components
 import "./components/backToTopBtn";
 import "./components/scrollDownArrow";

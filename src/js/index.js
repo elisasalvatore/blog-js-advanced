@@ -6,6 +6,7 @@ import "@fortawesome/fontawesome-free/css/all.css";
 import "../assets/img/screenshot-blogjs.png";
 //import components
 import "./components/backToTopBtn";
+import "./components/createHtmlTitleContent";
 import "./components/scrollDownArrow";
 // import functions
 import getData from "./api/getData";

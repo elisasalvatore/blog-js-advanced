@@ -4,17 +4,17 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<title>Newstories | Hacker News</title>
-
-		<!-- Adding favicon  via webpack-->
-
+		<!-- Import via webpack: 
+			1. script js (index.js) - in which there is the import of CSS custom styles
+			2. open graph meta tags 
+			3. favicon
+			4. title
+		-->
 		<!-- CDN FontAwesome -->
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
 		/>
-
-		<!-- import CSS Custom Style via index.js file -->
 	</head>
 	<body>
 		<div class="loader"></div>
@@ -54,7 +54,5 @@
 		<div id="btn-back-top">
 			<i class="fa fa-arrow-up"></i>
 		</div>
-
-		<!-- import file index.js via webpack-->
 	</body>
 </html>

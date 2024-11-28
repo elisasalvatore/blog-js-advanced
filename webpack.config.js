@@ -1,9 +1,20 @@
 const path = require("path"); ///Users/elisa/start2impact/code/projects/blog-js-advanced
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { type } = require("os");
+
+const metaTags = {
+	type: "website",
+	url: "https://blog-js-advanced.netlify.app/",
+	title: "Tech Blog - Js Advanced",
+	description:
+		"Blog JS Advanced is a modern blog site designed to showcase dynamic animations, advanced features, and interactivity via JavaScript.",
+	image: {
+		path: "https://blog-js-advanced.netlify.app/images/a53fda78764b7eadf3b3930d69206f3b.png",
+		width: "536",
+		height: "270",
+	},
+};
 
 const isProduction = process.env.NODE_ENV == "production";
-
 const stylesHandler = "style-loader";
 
 const config = {
@@ -11,6 +22,7 @@ const config = {
 	output: {
 		path: path.resolve(__dirname, "dist"),
 		filename: "main.js",
+		publicPath: "/",
 	},
 	devServer: {
 		port: 5050,
@@ -19,36 +31,44 @@ const config = {
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
-			title: "Newstories | Hacker News",
-			favicon: "./src/assets/images/favicon.png",
 			template: "index.html",
+			favicon: "./src/assets/img/favicon.png",
+			title: "Newstories | Hacker News",
 			meta: {
 				//OpenGraph Protocol
 				"og:title": {
 					property: "og:title",
-					content: "Tech Blog - Js Advanced",
+					content: metaTags.title,
 				},
-				"og:type": { property: "og:type", content: "website" },
+				"og:type": { property: "og:type", content: metaTags.type },
 				"og:url": {
 					property: "og:url",
-					content: "https://blog-js-advanced.netlify.app/",
+					content: metaTags.url,
 				},
-				// TODO: inserire URL immagine in 'content' + type / width / height / alt
 				"og:image": {
 					property: "og:image",
-					content: "...",
+					content: metaTags.image.path,
+				},
+				"og:image:width": {
+					property: "og:image:width",
+					content: metaTags.image.width,
+				},
+				"og:image:height": {
+					property: "og:image:height",
+					content: metaTags.image.height,
 				},
 				"og:description": {
 					property: "og:description",
-					content:
-						"Blog JS Advanced is a modern blog site designed to showcase dynamic animations, advanced features, and interactivity via JavaScript.",
+					content: metaTags.description,
 				},
 				"twitter:card": {
 					name: "twitter:card",
 					content: "summary_large_image",
 				},
-				// TODO: inserire URL immagine in 'content'
-				"twitter:image": { name: "twitter:image", content: "..." },
+				"twitter:image": {
+					name: "twitter:image",
+					content: metaTags.image.path,
+				},
 			},
 		}),
 	],
@@ -63,8 +83,15 @@ const config = {
 				use: [stylesHandler, "css-loader"],
 			},
 			{
-				test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
-				type: "asset",
+				test: /\.(png|jpe?g|gif)$/i,
+				use: [
+					{
+						loader: "file-loader",
+						options: {
+							outputPath: "images",
+						},
+					},
+				],
 			},
 		],
 	},

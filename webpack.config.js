@@ -31,9 +31,19 @@ const config = {
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
+			title: "Newstories | Hacker News",
 			template: "index.html",
 			favicon: "./src/assets/img/favicon.png",
 			meta: {
+				charset: { charset: "UTF-8" }, // Explicit charset declaration
+				viewport: "width=device-width, initial-scale=1",
+				"X-UA-Compatible": {
+					"http-equiv": "X-UA-Compatible", // Specify the http-equiv attribute
+					content: "IE=edge", // The value for the http-equiv meta tag
+				},
+				description: metaTags.description,
+				keywords: "blog, tech, javascript, webpack",
+				author: "Elisa Salvatore",
 				//OpenGraph Protocol
 				"og:title": {
 					property: "og:title",
@@ -48,11 +58,11 @@ const config = {
 					property: "og:image",
 					content: metaTags.image.path,
 				},
-				"og:image:width": {
+				attributes: {
 					property: "og:image:width",
 					content: metaTags.image.width,
 				},
-				"og:image:height": {
+				attributes: {
 					property: "og:image:height",
 					content: metaTags.image.height,
 				},

@@ -1,5 +1,7 @@
 // import CSS style
 import "../css/style.css";
+// import FontAwesome
+import "@fortawesome/fontawesome-free/css/all.css";
 // import images
 import "../assets/img/screenshot-blogjs.png";
 //import components

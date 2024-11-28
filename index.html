@@ -1,20 +1,14 @@
 <!doctype html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<title>Newstories | Hacker News</title>
 		<!-- Import via webpack: 
-			1. script js (index.js) - in which there is the import of CSS custom styles
-			2. open graph meta tags 
-			3. favicon
+			1. meta tags (+ OpenGraph Protocol)
+			2. title
+			3. script js (index.js) - in which there is the import of styles (CSS Custom and FontAwesome)
+			4. favicon
+			5. open graph meta tags 
 		-->
-		<!-- CDN FontAwesome -->
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-		/>
+		<title><%= htmlWebpackPlugin.options.title %></title>
 	</head>
 	<body>
 		<div class="loader"></div>
@@ -28,7 +22,7 @@
 					href="https://github.com/HackerNews/API?tab=readme-ov-file"
 					target="_blank"
 				>
-					<i class="fa fa-github"></i>
+					<i class="fa-brands fa-github"></i>
 				</a>
 			</div>
 		</div>
